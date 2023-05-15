@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_clone/features/chat/domain/entities/prompt_entitiy.dart';
 import 'package:flutter_chatgpt_clone/features/global/provider/high_order_functions.dart';
 import 'package:flutter_chatgpt_clone/features/global/theme/style.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+
+import '../../../global/provider/high_order_functions.dart';
 
 class ExampleWidget extends StatefulWidget {
   final OnMessageController onMessageController;
@@ -32,7 +33,7 @@ class _ExampleWidgetState extends State<ExampleWidget> {
               height: 140,
             ),
             Text(
-              "ChatGPT",
+              "NeoGPT",
               style: TextStyle(fontSize: 38, fontWeight: FontWeight.bold),
             ),
             SizedBox(
@@ -47,12 +48,12 @@ class _ExampleWidgetState extends State<ExampleWidget> {
                       data: PromptEntity.exampleListData,
                       isClickAble: true),
                   _rowItem(
-                      icon: SimpleLineIcons.energy,
+                      icon: Icons.wysiwyg_outlined,
                       title: "Capabilities",
                       data: PromptEntity.capabilitiesListData,
                       isClickAble: false),
                   _rowItem(
-                      icon: AntDesign.warning,
+                      icon: Icons.signal_wifi_connected_no_internet_4_sharp,
                       title: "Limitation",
                       data: PromptEntity.limitationListData,
                       isClickAble: false),
